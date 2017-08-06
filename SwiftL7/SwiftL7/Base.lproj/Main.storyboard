@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mV9-Kf-zgH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="R2G-Z4-rQY">
+            <objects>
+                <navigationController id="g1y-5b-9dm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="azI-7O-4Te">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="y6n-bA-luS" kind="relationship" relationship="rootViewController" id="CRe-9L-oov"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eC4-eL-XLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593" y="-135"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aYg-vZ-akI">
+            <objects>
+                <viewController id="y6n-bA-luS" customClass="ViewController" customModule="SwiftL7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aUK-hp-7Hq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wzl-sH-bET"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lZF-e9-B37">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nt-65-tcJ">
+                                <rect key="frame" x="32" y="378.5" width="311" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1vW-gV-kBy"/>
+                                </constraints>
+                                <state key="normal" title="Show the next View Controller"/>
+                                <connections>
+                                    <segue destination="so4-rF-NwO" kind="show" id="MaI-ru-xyw"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trump.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mTN-NV-5Dm">
+                                <rect key="frame" x="36" y="113" width="303" height="247"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Nt-65-tcJ" firstAttribute="centerY" secondItem="lZF-e9-B37" secondAttribute="centerY" constant="60" id="JUl-bg-HYc"/>
+                            <constraint firstItem="9Nt-65-tcJ" firstAttribute="top" secondItem="mTN-NV-5Dm" secondAttribute="bottom" constant="18" id="Wmf-u1-X5S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Nt-65-tcJ" secondAttribute="trailing" constant="16" id="Wtr-zk-UBe"/>
+                            <constraint firstItem="9Nt-65-tcJ" firstAttribute="leading" secondItem="lZF-e9-B37" secondAttribute="leadingMargin" constant="16" id="YfT-eF-IAe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mTN-NV-5Dm" secondAttribute="trailing" constant="20" id="atD-NK-hAQ"/>
+                            <constraint firstItem="mTN-NV-5Dm" firstAttribute="top" secondItem="aUK-hp-7Hq" secondAttribute="bottom" constant="49" id="bXD-Lm-Tw1"/>
+                            <constraint firstItem="mTN-NV-5Dm" firstAttribute="leading" secondItem="lZF-e9-B37" secondAttribute="leadingMargin" constant="20" id="fw5-qu-EML"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z4q-mr-h5M"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fd4-Rz-Fap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.80000000000001" y="-134.48275862068968"/>
+        </scene>
+        <!--My Table View Controller-->
+        <scene sceneID="MMy-Vn-v8H">
+            <objects>
+                <tableViewController id="7gr-XY-RXJ" customClass="MyTableViewController" customModule="SwiftL7" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gce-GG-RZS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myTableCellIdentifier" textLabel="vBw-FH-VQv" detailTextLabel="Aqa-sC-WZw" style="IBUITableViewCellStyleSubtitle" id="8ER-ca-1z9">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8ER-ca-1z9" id="OOD-nf-mFV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vBw-FH-VQv">
+                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aqa-sC-WZw">
+                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xdz-fy-V0Y" kind="show" identifier="presidentDetailsSegueIdetifier" id="Zi4-Ml-OsV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7gr-XY-RXJ" id="JYL-PA-exJ"/>
+                            <outlet property="delegate" destination="7gr-XY-RXJ" id="yfL-SP-WAp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ttN-KB-5Lc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="AhS-76-dl4">
+                            <connections>
+                                <action selector="reloadButtonTapped:" destination="7gr-XY-RXJ" id="hv5-JH-WHO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AnB-zr-uE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="335" y="571"/>
+        </scene>
+        <!--President Details View Controller-->
+        <scene sceneID="6kl-A7-tcr">
+            <objects>
+                <viewController id="xdz-fy-V0Y" customClass="PresidentDetailsViewController" customModule="SwiftL7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b5M-h9-WuX"/>
+                        <viewControllerLayoutGuide type="bottom" id="pCS-RM-wgh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YQS-y3-G0p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ftU-Z0-yz6">
+                                <rect key="frame" x="83" y="84" width="209" height="209"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ftU-Z0-yz6" secondAttribute="height" multiplier="1:1" id="klq-vK-Oss"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyb-Et-Cw4">
+                                <rect key="frame" x="36" y="323" width="303" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hTu-9m-4RX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Years of service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK0-4h-mHI">
+                                <rect key="frame" x="36" y="352" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HpY-Q6-3cN">
+                                <rect key="frame" x="0.0" y="381" width="375" height="278"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HpY-Q6-3cN" firstAttribute="top" secondItem="OK0-4h-mHI" secondAttribute="bottom" constant="8" id="2s8-aa-cvB"/>
+                            <constraint firstItem="pCS-RM-wgh" firstAttribute="top" secondItem="HpY-Q6-3cN" secondAttribute="bottom" constant="8" id="4OB-UW-aos"/>
+                            <constraint firstItem="hyb-Et-Cw4" firstAttribute="centerY" secondItem="YQS-y3-G0p" secondAttribute="centerY" id="5eU-Ct-cNr"/>
+                            <constraint firstItem="HpY-Q6-3cN" firstAttribute="leading" secondItem="YQS-y3-G0p" secondAttribute="leading" id="Nf8-lV-FRz"/>
+                            <constraint firstItem="OK0-4h-mHI" firstAttribute="leading" secondItem="hyb-Et-Cw4" secondAttribute="leading" id="a1h-2c-WFG"/>
+                            <constraint firstItem="OK0-4h-mHI" firstAttribute="top" secondItem="hyb-Et-Cw4" secondAttribute="bottom" constant="8" id="aAu-CC-wIS"/>
+                            <constraint firstItem="ftU-Z0-yz6" firstAttribute="top" secondItem="b5M-h9-WuX" secondAttribute="bottom" constant="20" id="ner-xl-7Vj"/>
+                            <constraint firstItem="OK0-4h-mHI" firstAttribute="trailing" secondItem="hyb-Et-Cw4" secondAttribute="trailing" id="oz2-l6-6tt"/>
+                            <constraint firstItem="hyb-Et-Cw4" firstAttribute="top" secondItem="ftU-Z0-yz6" secondAttribute="bottom" constant="30" id="pOO-Lo-ODI"/>
+                            <constraint firstItem="hyb-Et-Cw4" firstAttribute="leading" secondItem="YQS-y3-G0p" secondAttribute="leadingMargin" constant="20" id="pRE-1i-Hrg"/>
+                            <constraint firstAttribute="trailing" secondItem="HpY-Q6-3cN" secondAttribute="trailing" id="roH-rk-cCU"/>
+                            <constraint firstItem="ftU-Z0-yz6" firstAttribute="centerX" secondItem="YQS-y3-G0p" secondAttribute="centerX" id="we9-uX-CFV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hyb-Et-Cw4" secondAttribute="trailing" constant="20" id="zd1-Up-td5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailsTextView" destination="HpY-Q6-3cN" id="S2Y-bC-0Vp"/>
+                        <outlet property="presidentImageView" destination="ftU-Z0-yz6" id="Zzr-j2-lQa"/>
+                        <outlet property="presidentNameLabel" destination="hyb-Et-Cw4" id="sc6-zi-jh3"/>
+                        <outlet property="yearsOfServiceLabel" destination="OK0-4h-mHI" id="hf4-Yb-0fl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yuc-Cz-x4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1277.5999999999999" y="570.76461769115451"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kPv-xK-2F1">
+            <objects>
+                <navigationController id="mV9-Kf-zgH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LVP-17-iLt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7gr-XY-RXJ" kind="relationship" relationship="rootViewController" id="eHu-Jq-k4J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icj-QK-tN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-618" y="571"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="ZGa-ij-7EV">
+            <objects>
+                <viewController id="so4-rF-NwO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AR1-sc-R59"/>
+                        <viewControllerLayoutGuide type="bottom" id="mAI-ZN-CZm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CK3-bY-oYI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fok-cR-dH0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Trump was born in the New York City borough of Queens. He earned an economics degree from the Wharton School of the University of Pennsylvania. For 45 years, he managed The Trump Organization, the real estate development firm founded by his paternal grandmother. His business career focused on building or renovating office towers, hotels, casinos, and golf courses. He started several side ventures and branded various products with his name. He produced and hosted The Apprentice television series for 12 years. As of 2017, he was the 544th richest person in the world with an estimated net worth of $3.5 billion.
+
+Trump had long expressed interest in politics. He entered the 2016 presidential race as a Republican and defeated sixteen opponents in the primaries. Commentators described his political positions as populist, protectionist, and nationalist. His campaign received extensive free media coverage; many of his public statements were controversial or false. Trump won the general election on November 8, 2016, in a surprise victory against Democratic candidate Hillary Clinton. He became the oldest and wealthiest person ever to assume the presidency, the first without prior military or government service, and the fifth to have won the election despite losing the popular vote. His election and policies sparked numerous protests.
+
+In the first months of his presidency, Trump reversed several policies of former President Barack Obama: he withdrew the United States from the Trans-Pacific Partnership and the Paris Climate Agreement, and he undid parts of the Cuban Thaw. Trump appointed Neil Gorsuch to the Supreme Court. He ordered a travel ban on citizens from six Muslim-majority countries, which was partially implemented after several legal challenges.[2] After Trump dismissed FBI Director James Comey, the Justice Department appointed his predecessor Robert Mueller as special counsel to investigate Russia's interference in the presidential election, potential links between Russia and Trump campaign associates, and any related matters.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fok-cR-dH0" firstAttribute="leading" secondItem="CK3-bY-oYI" secondAttribute="leading" id="31A-b1-Qho"/>
+                            <constraint firstItem="fok-cR-dH0" firstAttribute="top" secondItem="AR1-sc-R59" secondAttribute="bottom" id="6TK-rw-e1L"/>
+                            <constraint firstItem="mAI-ZN-CZm" firstAttribute="top" secondItem="fok-cR-dH0" secondAttribute="bottom" id="Dzq-7r-gWV"/>
+                            <constraint firstAttribute="trailing" secondItem="fok-cR-dH0" secondAttribute="trailing" id="bZw-Ce-H9A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Information" id="pMW-l7-xzf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HMl-Ut-OUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.8" y="-137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trump.jpg" width="736" height="491"/>
+    </resources>
+</document>

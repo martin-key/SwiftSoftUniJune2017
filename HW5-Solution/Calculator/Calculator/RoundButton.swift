@@ -12,7 +12,7 @@ class RoundButton: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.layer.borderWidth = 2.0
+        self.layer.borderWidth = 1.0
         self.layer.borderColor = self.tintColor.cgColor
         self.layer.cornerRadius = 5
     }

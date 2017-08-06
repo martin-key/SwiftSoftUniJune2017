@@ -1,0 +1,6 @@
+framework module MARoundButton {
+  umbrella header "MARoundButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
